@@ -1,0 +1,26 @@
+{
+  "name": "tp4",
+  "version": "1.0.0",
+  "description": "![Preview](https://gitlab.com/l3-webavance/wa-cetre-corcoral/-/raw/master/public/img/baniere.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha svautour.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/l3-webavance/wa-cetre-corcoral.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://gitlab.com/l3-webavance/wa-cetre-corcoral/issues"
+  },
+  "homepage": "https://gitlab.com/l3-webavance/wa-cetre-corcoral#README"
+}

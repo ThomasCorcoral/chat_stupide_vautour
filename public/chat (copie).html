@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat pour les L3</title>
+    <link rel="stylesheet" href="./chat.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+</head>
+
+<body>
+    <input type="radio" name="btnScreen" id="radio1">
+    <input type="radio" name="btnScreen" id="radio2" checked>
+
+    <div class="game">
+        <div id="menu">
+
+
+            <div class="dropdown">
+                <span>Parties \/</span>
+                <div class="dropdown-content">
+                    <a href="#p1">Partie 1</a><br><br>
+                    <a href="#p2">Partie 2</a>
+                </div>
+              </div>
+
+              
+        </div>
+        <div id="plateau">
+            <div class="j3">
+                SI PERSONNE :
+                    <p>En attente <span class="one">.</span><span class="two">.</span><span class="three">.</span>​</p>
+
+                <p>Max</p>
+                <p>Score : 10</p>
+                <img src="./img/bleu/retourne.png" alt="a joué" title="a joué">
+            </div>
+            <div class="j1">
+                <p>Jean</p>
+                <p>Score : 10</p>
+                <img src="./img/jaune/retourne.png" alt="a joué" title="a joué">
+            </div>
+            <div class="j2">
+                <p>Patrique</p>
+                <p>Score : 10</p>
+                <img src="./img/violet/retourne.png" alt="a joué" title="a joué">
+            </div>
+            <div class="j4">
+                <p>Martin</p>
+                <p>Score : 10</p>
+                <img src="./img/rouge/retourne.png" alt="a joué" title="a joué">
+            </div>
+
+            <div class="middle">
+                <img src="./img/middle/-1.png" alt="-1" title="-1">
+            </div>
+        </div>
+        <div class="player-hand">
+            <img class="cartes" src="./img/vert/1.png" alt="1">
+            <img class="cartes" src="./img/vert/2.png" alt="2">
+            <img class="cartes" src="./img/vert/3.png" alt="3">
+            <img class="cartes" src="./img/vert/4.png" alt="4">
+            <img class="cartes" src="./img/vert/5.png" alt="5">
+            <img class="cartes" src="./img/vert/6.png" alt="6">
+            <img class="cartes" src="./img/vert/7.png" alt="7">
+            <img class="cartes" src="./img/vert/8.png" alt="8">
+            <img class="cartes" src="./img/vert/9.png" alt="9">
+            <img class="cartes" src="./img/vert/10.png" alt="10">
+            <img class="cartes" src="./img/vert/11.png" alt="11">
+            <img class="cartes" src="./img/vert/12.png" alt="12">
+            <img class="cartes" src="./img/vert/13.png" alt="13">
+            <img class="cartes" src="./img/vert/14.png" alt="14">
+            <img class="cartes" src="./img/vert/15.png" alt="15">
+            
+        </div>
+    </div>
+</body>
+
+</html>

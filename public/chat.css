@@ -1,0 +1,704 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+        
+
+/*************************************************************************
+ ***                    Début de la feuille de style                   ***
+ *************************************************************************/ 
+
+body {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;   
+}
+body > div {
+    box-shadow: -10px 10px 20px #A0A0A0;
+    border: solid 1px #A0A0A0;
+}
+div {
+    padding: 10px;
+}
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height: 500px;
+    width: 700px;
+    background-color: beige;
+    padding: 10px;
+}
+#content h2, #content h3 {
+    position: absolute;
+    background-color: inherit;
+    height: 22px;
+    padding: 5px;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    border-top: inherit;
+    border-left: inherit;
+    border-right: inherit;
+}
+#content h2 {
+    top: -22px;
+    left: -1px;
+}
+#content h3 {
+    right: -11px;
+    top: -12px;
+    transform-origin: left center;
+    transform: translate(100%) rotate(90deg);
+}
+#content main {
+    position: relative;
+    height: calc(100% - 30px);
+    width: calc(100% - 170px);
+    background-color: white;
+    overflow-y: scroll;
+    line-height: 1.2;
+}
+#content main p {
+    line-height: 1;
+    font-size: 16px;
+    margin: 3px;
+}
+#content main .mp {
+    color: darkblue;   
+}
+#content main .moi {
+    color: green;   
+}
+#content main .system {
+    color: orange;   
+}
+#content main .chifoumi {
+    color: blueviolet;   
+}
+#content main .svautour {
+    color: lightblue;   
+}
+#content main img {
+    max-width: 50%;
+    vertical-align: text-top;
+}   
+
+/** Pied de zone de chat */        
+#content footer {
+    position: absolute; 
+    bottom: 0;
+    padding: 2px 0 6px 0; 
+    width: calc(100% - 20px);
+    background-color: inherit;
+}
+#content footer input {
+    font-size: 15px;
+}
+#content > footer input:first-child {
+    width: calc(100% - 180px);
+    font-size: 12px;
+}
+#content > footer input:last-child {
+    float: right;
+}
+        
+#content aside {
+    width: 160px;
+    float: right;
+    margin: 0px;
+    padding: 5px;
+    height: calc(100% - 30px);
+    background-color: white;
+    line-height: 1.2;
+    font-size: 14px;
+}
+#content aside p {
+    cursor: pointer;   
+    margin: 0;
+    padding: 0;
+}
+#content aside p[data-score]:after {
+    content: ' [' attr(data-score) ' pts]';
+    float: right;
+}
+#content aside p[data-score]:nth-child(1):before {
+    content: '\01F947';
+}
+#content aside p[data-score]:nth-child(2):before {
+    content: '\01F948';
+}
+#content aside p[data-score]:nth-child(3):before {
+    content: '\01F949';
+}
+        
+body > div, body > input[type=radio] {
+    display: none;   
+}
+        
+input[type=radio]:checked + div {
+    display: block;   
+}
+    
+        
+#logScreen {
+    background: rgba(200, 200, 200, 0.8);
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#logScreen > div {
+    text-align: center;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: solid 2px #000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #000;
+    padding-top: 20px;
+}
+#logScreen input {
+    padding: 3px;
+    font-size: 80%;
+    margin: 10px;
+}
+#logScreen #pseudo {
+    width: 80%;   
+}
+
+/** Animation BUZZ **/
+.buzz {
+    animation-name: buzz;
+    animation-duration  : 0.10s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+}
+@keyframes buzz {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-55%, -50%);
+    }
+    75% {
+        transform: translate(-45%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/**
+  * Partie du style pour le jeu Stupide vautour
+  */
+
+body > .game, body > input[type=radio] {
+    display: none;   
+}
+        
+input[type=radio]:checked + .game {
+    display: block;   
+}
+
+@font-face{font-family:game_square;src:url(./font/CuteNotes.ttf)}
+
+.game{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color: burlywood;
+}
+
+.game #menu{
+    width: 100%;
+    height: 250px;
+    background-image: url("img/baniere.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/** Animation qui décale le jeu **/
+.appear
+{
+    animation-duration: 1s;
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  @keyframes appear {
+    from {
+        left: 100%;
+    }
+  
+    to {
+      left: 50%;
+    }
+}
+
+/** Animation qui fait disparaitre **/
+.disappear
+{
+    animation-duration: 1s;
+    animation-name: disappear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  @keyframes disappear {
+    from {
+        left: 50%;
+    }
+  
+    to {
+      left: 105%;
+    }
+}
+
+/** Animation qui décale le chat principal **/
+.move
+{
+    animation-duration: 1s;
+    animation-name: move;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  @keyframes move {
+    from {
+        left: 50%;
+    }
+  
+    to {
+      left: 25%;
+    }
+}
+
+.back_move
+{
+    animation-duration: 1s;
+    animation-name: back_move;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  @keyframes back_move {
+    from {
+        left: 25%;
+    }
+  
+    to {
+      left: 50%;
+    }
+}
+
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #f9f9f985;
+    padding: none;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f985;
+    min-width: 160px;
+    margin: 10px -10px;
+    padding: 12px 16px;
+}
+
+.dropdown-content > a{
+    text-decoration: none;
+    color: black;
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.game .j1{
+    position: relative;
+    top: 290px;
+    float: left;
+}
+
+.game .j2{
+    position: relative;
+    top: 400px;
+    float: left;
+    clear: both;
+}
+
+.j1 > img, .j2 > img{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    left: 60px;
+    top: 70px;
+}
+
+.game .j3{
+    position: relative;
+    top: 290px;
+    float: right;
+}
+
+.game .j4{
+    position: relative;
+    top: 400px;
+    float: right;
+}
+
+.j3 > img, .j4 > img{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    right: 60px;
+    top: 70px;
+}
+
+.game .plateau{
+    font-family: game_square;
+    font-size: 28px;
+}
+
+.game .plateau .middle{
+    top: 300px;
+    left: 42%;
+    position: absolute;
+}
+
+.game .plateau .middle img{
+    position: absolute;
+    height: 200px;
+    width: auto;
+}
+
+.game .plateau .middle p{
+    position: absolute;
+    text-align: center;
+} 
+
+.one {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.0s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.0s;
+}
+
+.two {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.2s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.2s;
+}
+
+.three {
+    opacity: 0;
+    -webkit-animation: dot 1.3s infinite;
+    -webkit-animation-delay: 0.3s;
+    animation: dot 1.3s infinite;
+    animation-delay: 0.3s;
+}
+
+@-webkit-keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root{
+    --hand-decalage: 10px;
+}
+
+.player-hand{
+    position: absolute;
+    top:660px;
+}
+
+.player-hand p{
+    position: absolute;
+    top: 220px;
+    font-family: game_square;
+    font-size: 28px;
+    width: max-content;
+}
+
+.cartes{
+    position: absolute;
+    animation-duration: .3s;
+    animation-name: back;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    /*z-index: 1; // Avec cette ligne la carte repasse derrière la précédente*/
+  }
+  @keyframes back {
+    from {
+        transform: translateY(-30px);
+    }
+  
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cartes:hover{
+    animation-duration: .7s;
+    animation-name: select;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    /*z-index: 10; // Avec cette ligne la carte passe devant en cas de selection (hover)*/
+  }
+  @keyframes select {
+    from {
+        transform: translateY(0);
+    }
+  
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+.cartes:onclick{
+    animation-duration: .1s;
+    animation-name: wizz;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    /*z-index: 10; // Avec cette ligne la carte passe devant en cas de selection (hover)*/
+  }
+  @keyframes wizz {
+    from {
+        transform: translateY(-10px);
+    }
+  
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/*.leftbut{
+    padding: 15px;
+    position: absolute;
+    left: 820px;
+}*/
+
+/* 
+========================
+      LEFTBUT
+========================
+*/
+.leftbut {
+    position: absolute;
+    background: none;
+    right: 25px;
+    top: 25px;
+    width: 32px;
+    border: none;
+    height: 32px;
+    opacity: 0.6;
+}
+.leftbut:active{
+    outline-style:none;
+}
+.leftbut:hover {
+    opacity: 1;
+}
+.leftbut:before, .leftbut:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.leftbut:before {
+    transform: rotate(45deg);
+}
+.leftbut:after {
+    transform: rotate(-45deg);
+}
+  
+
+/* 
+========================
+      MODE SOMBRE
+========================
+*/
+
+.dark{
+    background-color: #1F1F1F;
+}
+
+.dark > h2, .dark > h3{
+    color: white;
+}
+
+#content.dark{
+    background-color: #1F1F1F;
+    box-shadow: none;
+}
+
+#content.dark > aside, #content.dark > main{
+    background-color: #494949;
+}
+
+#content.dark > aside > p, #content.dark > main{
+    background-color: #494949;
+    color: white;
+}
+
+#content.dark>main>p.mp {
+    color: #AAB4FF;   
+}
+#content.dark>main>p.moi {
+    color: rgb(0, 190, 0);   
+}
+#content.dark>main>p.system {
+    color: rgb(255, 195, 82);   
+}
+#content.dark>main>p.chifoumi {
+    color: rgb(171, 99, 238);   
+}
+#content.dark>main>p.svautour {
+    color: lightblue;   
+}
+
+#content.dark > footer > input{
+    color: white;
+    background-color: black;
+}
+
+#content.dark main::-webkit-scrollbar {
+    width: 8px;
+}
+  
+#content.dark main::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #797979; 
+}
+   
+#content.dark main::-webkit-scrollbar-thumb {
+    background: #727272; 
+}
+  
+#content.dark main::-webkit-scrollbar-thumb:hover {
+    background: rgb(167, 167, 167); 
+    box-shadow: inset 0 0 5px rgb(167, 167, 167); 
+}
+
+#logScreen.dark{
+    background-color: #313131;
+}
+
+#logScreen.dark > #connexion{
+    background: #4B4B4B;
+}
+
+#logScreen.dark > #connexion > p{
+    color: white;
+}
+
+#logScreen.dark > #connexion > p > input{
+    background-color: black ;
+    color: white;
+}
+
+div.game.dark{
+    background-color: #313131;
+    box-shadow: none;
+}
+
+.game.dark>#menu{
+    opacity: .2;
+}
+
+div.game.dark>.plateau>.middle>p{
+    color: whitesmoke;
+}
+
+#son{
+    width:12px;
+    height:12px;
+}
