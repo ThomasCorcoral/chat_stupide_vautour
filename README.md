@@ -1,5 +1,5 @@
 # Stupide Vautour + Chat
-![Preview](https://gitlab.com/l3-webavance/wa-cetre-corcoral/-/raw/master/public/img/baniere.png)
+![Preview](https://github.com/ThomasCorcoral/chat_stupide_vautour/blob/master/svautour.png)
 
 
 ## En quoi consiste ce projet ?
