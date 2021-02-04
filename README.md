@@ -1,47 +1,47 @@
-# Stupide Vautour + Chat
+# Stupide Vautour + Chat. NOW disponible here : https://svautour.thomascorcoral.com/
 ![Preview](https://github.com/ThomasCorcoral/chat_stupide_vautour/blob/master/svautour.png)
 
 
-## En quoi consiste ce projet ?
-Il s'agit d'un chat sur lequel plusieurs utilisateurs peuvent intéragirs. Afin d'améliorer ce dernier un jeu de société y a été ajouté. Grace à une commande vous pouvez lancer ce dernier et jouer avec vos amis.
-Liste des commandes Stupide Vautour :<br>
-<pre>- /svautour create [Nombre Tours < 0 et > 6] [Couleur] @invité ...</pre><br>
+## What is this project? ?
+This is a chat on which several users can interact. In order to improve the latter a board game has been added. Thanks to a command you can launch it and play with your friends.
+List of commands Stupid Vulture:<br>
+<pre>- /svautour create [Numbre of Tunrs < 0 et > 6] [Color] @Name_Invite ...</pre><br>
 <pre>- /svautour start [id]</pre><br>
-<pre>- /svautour invite [id] @invité</pre><br>
-<pre>- /svautour join [id] [Couleur]</pre><br>
+<pre>- /svautour invite [id] @Name_Invite</pre><br>
+<pre>- /svautour join [id] [Color]</pre><br>
 
 ## Demo
 
-Une démo via un script Selenium Java est disponible dans le projet. Il vous suffit de lancer le test de votre choix (2 sont disponibles). Pour ce faire veuillez utiliser JUnit (Maven).<br>
-/!\ VEUILLEZ REDÉMARRER node . ENTRE CHAQUE TEST, ÉTANT DONNÉ QU'ILS UTILISENT DES ID DE PARTIE IDENTIQUES POUR LES TESTS /!\
+A demo via a Selenium Java script is available in the project. Simply run the test of your choice (2 are available). To do this please use JUnit (Maven).<br>
+/!\ PLEASE RESTART `node .` BETWEEN EACH TEST, AS THEY USE IDENTICAL PARTY ID FOR TESTS /!\
 
-## Comment a-t-il été réalisé ?
+## How was it realized?
 
-Notre chat ainsi que notre jeu <a href="https://www.didacto.com/10-ans-et-/1731-stupide-vautour-3421272408320.html" title="Stupide Vautour">Stupide Vautour</a> ont été réalisé avec Javascript. Nous avons mis en place une communication client - serveur avec Node JS.
+Our chat and our game have <a href="https://www.didacto.com/10-ans-et-/1731-stupide-vautour-3421272408320.html" title="Stupide Vautour">Stupide Vautour</a> owere made with Javascript. We have set up a client - server communication with Node JS.
 
-## Guide d'installation
+## Instalation guide
 
-#### Etape 1
+#### Step 1
 
-Copiez le projet sur votre ordinateur.
+Clone the project to your computer.
 
-#### Etape 2
+#### Step 2
 
-Dans le répértoire du fichier, mettez les commandes :
+In the file folder, put the commands:
 <pre>npm install express --save</pre><br>
 <pre>npm install socket.io --save</pre><br>
 
-#### Etape 3
+#### Step 3
 
-Rendez vous dans le dossier de ce dernier et saisissez la commande <code>node .</code>
+Go to the folder of the latter and type the command <code>node .</code>
 
-#### Etape 4
+#### Step 4
 
-Connectez-vous à l'adresse localhost:8080
+Connect yourself to the adress localhost:8080
 
-#### Etape 5.1 (option)
+#### Step 5.1 (option)
 
-Créez un nouveau projet avec maven et mettez ces lignes dans les "dependencies" votre fichier pom.xml<br>
+Create a new project with maven and put these lines in the "dependencies" your file pom.xml<br>
 
 _\<dependency> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<groupId>junit\</groupId> <br>
@@ -56,6 +56,6 @@ _\<dependency> <br>
 \</dependency> <br>_
 
  
-#### Etape 5.2 (option)
+#### Step 5.2 (option)
 
-Executez le test de votre choix (Attention à bien avoir lancé le serveur node avant)
+Run the test of your choice (Be careful to have launched the node server before)
