@@ -1,4 +1,4 @@
-# Stupide Vautour + Chat. NOW available - www.svautour.thomascorcoral.com/
+# Board game NOW available - www.svautour.thomascorcoral.com/
 ![Preview](https://github.com/ThomasCorcoral/chat_stupide_vautour/blob/master/svautour.png)
 
 
