@@ -1,4 +1,4 @@
-# Stupide Vautour + Chat. NOW disponible here : https://svautour.thomascorcoral.com/
+# Stupide Vautour + Chat. NOW available - www.svautour.thomascorcoral.com/
 ![Preview](https://github.com/ThomasCorcoral/chat_stupide_vautour/blob/master/svautour.png)
 
 
